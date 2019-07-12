@@ -1,0 +1,162 @@
+.margin-right {
+  margin-right: 15px;
+}
+
+@primary-color: #1DA57A;
+
+:global {
+  // 左侧 side 折叠按钮样式
+  .ant-layout-sider-zero-width-trigger {
+      top: 10px!important;
+      background: transparent!important;
+      color: #333!important;
+  
+      &:hover {
+          background: transparent;
+      }
+  }
+  
+  // 文本框不可操作状态样式，由灰色变成白色
+  .ant-input-disabled{
+    background-color: #ffffff;
+  }
+
+  // 设置表格项表头和内容居中显示
+  .ant-table {
+    .ant-table-thead > tr > th {
+      text-align: center;
+    }
+
+    .ant-table-tbody > tr > td {
+      text-align: center;
+    }
+  }
+
+  // 设置表格分页居中显示
+  .ant-table-pagination {
+    float: none !important;
+    display: table;
+    margin: 16px auto !important;
+  }
+
+  // 设置模态框高度固定，超出出现滚动条
+  .ant-modal-body {
+    max-height: 400px;
+    overflow: auto;
+  }
+
+  // 左侧 sider 宽度样式
+  .ant-layout {
+    .ant-layout-sider {
+      flex: 0 0 256px!important;
+      width: 256px!important;
+      max-width: 256px!important;
+    }
+  }
+
+  // popover 组件
+  .layout-popover {
+    width: 280px;
+    margin-left: 6px;
+
+    :global {
+      .ant-popover-inner-content {
+        padding: 0;
+    
+        .ant-menu-inline .ant-menu-item,
+        .ant-menu-vertical .ant-menu-item {
+          border-right: 0;
+          height: 48px;
+          line-height: 48px;
+        }
+    
+        .ant-menu-inline .ant-menu-item-selected,
+        .ant-menu-inline .ant-menu-selected {
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  .org-branches {
+    :global {
+      .ant-table-tbody > tr > td:first-child {
+        text-align: left;
+      }
+    }
+  }
+
+  #nprogress {
+    pointer-events: none;
+
+    .bar {
+      background: @primary-color;
+      position: fixed;
+      z-index: 1024;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .peg {
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px @primary-color, 0 0 5px @primary-color;
+      opacity: 1.0;
+      transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+      border: solid 2px transparent;
+      border-top-color: @primary-color;
+      border-left-color: @primary-color;
+      border-radius: 50%;
+
+      :local {
+        animation: nprogress-spinner 400ms linear infinite;
+      }
+    }
+  }
+
+  .nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+
+    #nprogress {
+      .bar,
+      .spinner {
+        position: absolute;
+      }
+    }
+  }
+
+  .margin-right {
+    margin-right: 5px;
+  }
+}
+
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

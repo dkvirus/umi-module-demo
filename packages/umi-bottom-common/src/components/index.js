@@ -1,0 +1,1 @@
+export { DescriptionList, Description } from './DescriptionComp'

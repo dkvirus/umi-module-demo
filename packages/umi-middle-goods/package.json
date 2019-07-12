@@ -1,0 +1,44 @@
+{
+  "name": "umi-middle-goods",
+  "version": "1.0.0",
+  "main": "lib/export.js",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "build:cjs": "father build --cjs babel",
+    "lint": "eslint --ext .js src",
+    "lint:fix": "eslint --fix --ext .js src",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "umi-bottom-common": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.4.0",
+    "eslint-config-umi": "^0.1.5",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "father": "^2.5.1",
+    "husky": "^0.14.3",
+    "lerna": "^3.15.0",
+    "lint-staged": "^7.2.2",
+    "umi": "^2.6.17",
+    "umi-plugin-react": "^1.1.1"
+  }
+}

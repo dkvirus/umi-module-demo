@@ -1,0 +1,9 @@
+{
+  "extends": "eslint-config-umi",
+  "rules": {
+    "quotes": [1, "single"],
+    "quote-props":[2, "as-needed"],
+    "semi": [2, "never"],
+    "comma-dangle": [1,"always-multiline"]
+  }
+}
