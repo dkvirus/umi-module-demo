@@ -1,13 +1,13 @@
-"use strict";
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
+Object.defineProperty(exports, '__esModule', {
+  value: true,
+})
+exports.default = void 0
 
-var _umiBottomCommon = require("umi-bottom-common");
+var _umiBottomCommon = require('umi-bottom-common')
 
-var _config = require("configs/config");
+var _config = require('configs/config')
 
 /**
  * 封装网络请求库
@@ -23,7 +23,7 @@ var _config = require("configs/config");
  *      - 统一添加请求 token
  */
 var request = (0, _umiBottomCommon.getRequest)({
-  baseURL: _config.apiPrefix
-});
-var _default = request;
-exports.default = _default;
+  baseURL: _config.apiPrefix,
+})
+var _default = request
+exports.default = _default
