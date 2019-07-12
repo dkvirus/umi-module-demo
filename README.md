@@ -8,8 +8,6 @@ umi 实现模块化 demo。
 
 打成 npm 包供中间业务层使用
 
-![布局](https://cdn.nlark.com/yuque/0/2019/png/103389/1562929723260-53980930-ac7a-4a99-8400-1d1a61998796.png?x-oss-process=image/resize,w_640)
-
 ### 中间业务层：umi-middle-goods、umi-middle-order
 
 依赖 umi-bottom-common（`$ npm install umi-bottom-common`），使用 umi-bottom-common 提供的布局和登录认证相关的东东
@@ -20,10 +18,6 @@ umi 实现模块化 demo。
 
 也可以打成 npm 包供最上层集成项目使用
 
-![goods](https://cdn.nlark.com/yuque/0/2019/png/103389/1562934207145-dee6c695-e2b3-43bc-91a6-0d48bc8c442f.png?x-oss-process=image/resize,w_637)
-
-![order](https://cdn.nlark.com/yuque/0/2019/png/103389/1562935553265-189614ee-1026-4541-99d1-57d973b755fb.png?x-oss-process=image/resize,w_746)
-
 ### 最上层集成项目：umi-top-integration
 
 最上层：负责组装中间业务层。需要用到什么业务功能，就引用对应的中间业务层。
@@ -33,8 +27,6 @@ umi 实现模块化 demo。
 乙公司只要商品业务：`$ npm install umi-middle-goods`
 
 丙公司要订单业务和商品业务：`$ npm install umi-middle-order umi-middle-goods`
-
-![integration](https://cdn.nlark.com/yuque/0/2019/png/103389/1562935440408-21c64d92-fcaf-4768-b5d6-0c62356da83a.png?x-oss-process=image/resize,w_746)
 
 # 启动
 
